@@ -1,0 +1,6 @@
+# Fragment for the form type.
+fragment formDetails on Form {
+    title
+    intro
+    redirect_link
+}

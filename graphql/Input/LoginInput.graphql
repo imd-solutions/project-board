@@ -1,0 +1,4 @@
+input LoginInput {
+    username: String @rules(apply: ["required"], messages: { required: "Username is required."})
+    password: String @rules(apply: ["required"], messages: { required: "Password is required."})
+}

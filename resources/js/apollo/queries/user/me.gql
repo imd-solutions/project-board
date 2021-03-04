@@ -1,0 +1,7 @@
+# Query for the logged in user.
+#import "../../fragments/userDetails.gql"
+query {
+    me {
+      ...userDetails
+    }
+}

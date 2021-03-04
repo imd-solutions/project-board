@@ -1,0 +1,7 @@
+# Mutation to log user into the site.
+#import "../../fragments/authPayloadDetails.gql"
+mutation login($input: LoginInput) {
+    login(input: $input) {
+        ...authPayloadDetails
+    }
+}

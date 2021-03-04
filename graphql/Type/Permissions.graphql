@@ -1,0 +1,6 @@
+# Permission type
+type Permissions {
+    id: ID!
+    key: String!
+    table_name: String
+}

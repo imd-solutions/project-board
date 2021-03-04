@@ -1,0 +1,7 @@
+# Mutation to update the user details.
+#import "../../fragments/userDetails.gql"
+mutation updateUserProfile ($id: ID! $input: UpdateUserDetails!) {
+  updateUser(id: $id, input: $input) {
+        ...userDetails
+  }
+}

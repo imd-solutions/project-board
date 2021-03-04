@@ -1,0 +1,14 @@
+# Fragment for the application type.
+fragment applicationDetails on Application {
+    name
+    version
+    environment
+    year
+    address_1
+    address_2
+    city
+    county
+    postcode
+    phone
+    email
+}

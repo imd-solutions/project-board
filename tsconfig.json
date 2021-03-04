@@ -1,0 +1,58 @@
+{
+    "compilerOptions": {
+        "strictNullChecks": false,
+        "target": "es5",
+        "strict": true,
+        "module": "es2020",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "lib": [
+            "es2015",
+            "es5",
+            "dom"
+        ],
+        "baseUrl": "./resources/js",
+        "suppressImplicitAnyIndexErrors": true,
+        "types": [
+            "jest",
+            "cypress"
+        ],
+        "paths": {
+            "@plugins/*": [
+                "./plugins/*"
+            ],
+            "@includes/*": [
+                "./includes/*"
+            ],
+            "@partials/*": [
+                "./partials/*"
+            ],
+            "@mainStore/*": [
+                "./store/*"
+            ],
+            "@store/*": [
+                "./store/modules/*"
+            ],
+            "@mutations/*": [
+                "./apollo/mutations/*"
+            ],
+            "@queries/*": [
+                "./apollo/queries/*"
+            ],
+            "@mixins/*": [
+                "./mixins/*"
+            ]
+        }
+    },
+    "include": [
+        "resources/js/**/*",
+        "**/*.ts"
+    ],
+    "files": [
+        "tsx-shims.d.ts"
+    ],
+    "exclude": [
+        "__tests__",
+        "node_modules"
+    ]
+}

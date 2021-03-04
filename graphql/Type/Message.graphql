@@ -1,0 +1,6 @@
+type Message {
+    status: Int
+    message: String
+    css: String
+    title: String
+}

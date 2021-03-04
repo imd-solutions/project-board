@@ -1,0 +1,10 @@
+type Card {
+    id: ID!
+    icon: String
+    header: String
+    body: String
+    border: Int
+    background_colour: String
+    image: String
+    section_id: Int
+}

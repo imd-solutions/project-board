@@ -1,0 +1,11 @@
+# Fragment for the user.
+#import "./userDetails.gql"
+fragment authPayloadDetails on AuthPayload {
+    access_token
+    refresh_token
+    expires_in
+    token_type
+    user {
+     ...userDetails
+    }
+}

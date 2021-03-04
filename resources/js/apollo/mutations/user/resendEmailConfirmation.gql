@@ -1,0 +1,7 @@
+# Mutation to resend user email confirmation.
+#import "../../fragments/messageDetails.gql"
+mutation resendConfirmationEmail($email : String) {
+  resendConfirmationEmail (email: $email) {
+    ...messageDetails
+  }
+}

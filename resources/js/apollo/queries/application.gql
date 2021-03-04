@@ -1,0 +1,7 @@
+# Query the application.
+#import "../fragments/applicationDetails.gql"
+query {
+    application {
+        ...applicationDetails
+    }
+}

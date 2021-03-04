@@ -1,0 +1,6 @@
+fragment messageDetails on Message {
+    status
+    message
+    css
+    title
+}

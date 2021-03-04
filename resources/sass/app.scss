@@ -1,0 +1,266 @@
+//Fonts
+@import "site/fonts";
+// Icons
+@import "site/icons";
+// Margin
+@import "site/margins";
+// Padding
+@import "site/paddings";
+
+// Pages
+@import "site/pages/auth/style";
+@import "site/pages/application/style";
+@import "site/pages/homepage";
+
+//@import "application/application";
+//@import "bulkit/core_startup";
+
+@import "bulma";
+@import "bulma-extensions";
+@import "initial-variables";
+
+.navbar-link:not(.is-arrowless)::after {
+    border-color: red;
+    margin-top: -0.375em;
+    right: 1.125em;
+}
+
+.navbar.nav-light.is-faded .navbar-item {
+    .is-menu {
+        color: #666666 !important;
+    }
+}
+
+a.navbar-link.navbar-item.has-hover {
+    background: transparent !important;
+}
+
+//.navbar-dropdown {
+//    a .is-menu {
+//        span {
+//            color: #666666 !important;
+//        }
+//    }
+//}
+
+
+.control.required.has-error .input {
+    border-color: #FF7273;
+}
+
+.control.required .validation-info.is-error {
+    color: #FF7273;
+}
+
+
+.has-error {
+
+    .input {
+        border-color: #FF7273;
+    }
+
+    small {
+        color: #FF7273;
+    }
+
+    .sl {
+        color: #FF7273;
+    }
+
+}
+
+/* Section Title */
+button {
+    i {
+        margin-right: 5px;
+    }
+}
+
+#backtotop {
+    a {
+        padding-top: 4px;
+    }
+}
+
+a.navbar-item:hover {
+    background-color: transparent !important;
+}
+
+a.navbar-item.is-active {
+    color: red;
+}
+
+#signup-intro {
+    padding: 0rem 1.5rem;
+}
+
+
+/* MEDIA QUERY */
+@media screen and (max-width: 768px) {
+
+    h1.title {
+        font-size: 2rem !important;
+    }
+    h2.subtitle {
+        font-size: 1rem !important;
+    }
+
+    .navbar-item span.icon {
+        margin-top: 5px !important;
+        padding-bottom: 1rem !important;
+
+        img {
+            max-height: 2.25rem;
+        }
+    }
+
+    .hero {
+        .is-fullheight {
+            min-height: 50vh;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+
+    .topbar {
+
+        height: 53px !important;
+
+    }
+
+    .navbar-item {
+        .has-control.no-left-space-touch {
+            height: 53px !important;
+        }
+
+        img {
+            max-height: 2.45rem;
+        }
+    }
+
+    .is-hidden-custom {
+        display: none !important;
+    }
+
+    .pl-14 {
+        padding-left: 8.5rem;
+    }
+
+    .navbar-brand {
+        min-height: 2.0rem;
+        width: 100%;
+    }
+
+    nav.navbar .navbar-item.has-dropdown {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    nav.navbar .navbar-item.has-divider {
+        border-right: 1px solid hsla(0, 0%, 85.9%, .25);
+    }
+    .navbar-item.has-dropdown {
+        padding: 0;
+    }
+
+    html.has-aside-mobile-transition #app, html.has-aside-mobile-transition body, html.has-aside-mobile-transition nav.navbar {
+        width: 100%;
+    }
+
+    .navbar.is-fixed-top {
+        top: 0;
+    }
+    .navbar.is-fixed-bottom, .navbar.is-fixed-top {
+        left: 0;
+        position: fixed;
+        right: 0;
+        z-index: 30;
+    }
+
+    #app, nav.navbar {
+        transition: margin-left .25s ease-in-out 50ms;
+    }
+    nav.navbar {
+        display: flex;
+        padding-right: 0;
+    }
+    nav.navbar {
+        box-shadow: 0 1px 0 rgba(24, 28, 33, .04);
+    }
+    .navbar {
+        background-color: #fff;
+        min-height: 3.25rem;
+        position: relative;
+        z-index: 30;
+    }
+
+    .navbar.is-fixed-top-touch .navbar-menu, .navbar.is-fixed-top .navbar-menu {
+        -webkit-overflow-scrolling: touch;
+        max-height: calc(100vh - 3.25rem);
+        overflow: auto;
+    }
+
+    nav.navbar .navbar-menu {
+        position: absolute;
+        width: 100vw;
+        padding-top: 0;
+        top: 3.25rem;
+        left: 0;
+    }
+
+    .navbar-menu.is-active {
+        display: block;
+    }
+    .navbar-item {
+        span.icon {
+            margin-top: 5px !important;
+            padding-bottom: 0rem !important;
+        }
+    }
+    .navbar-dropdown {
+        font-size: 0.875rem;
+        padding-bottom: 1.25rem;
+        padding-top: 0.5rem;
+    }
+
+    .sidebarPadding, .mainBody {
+        padding-left: 8rem;
+    }
+
+    .hero {
+        .is-fullheight {
+            min-height: 80vh;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .sidebarPadding, .mainBody {
+        padding-left: 14rem;
+    }
+
+    .navbar-item {
+
+        img {
+            max-height: 3rem;
+        }
+    }
+
+    .navbar-end {
+        .margin10 {
+            margin: 10px;
+        }
+
+        .margin20 {
+            margin: 20px;
+        }
+    }
+
+    .hero {
+        .is-fullheight {
+            min-height: 125vh;
+        }
+    }
+
+}

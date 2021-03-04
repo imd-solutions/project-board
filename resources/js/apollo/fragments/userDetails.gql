@@ -1,0 +1,7 @@
+# Fragment for the user.
+fragment userDetails on User {
+    name
+    avatar
+    email
+    email_verified_at
+}

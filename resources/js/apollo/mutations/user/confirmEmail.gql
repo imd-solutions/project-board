@@ -1,0 +1,7 @@
+# Mutation to confirm user email.
+#import "../../fragments/messageDetails.gql"
+mutation confirmUserEmail($code: String) {
+    confirmUserEmail(code: $code) {
+        ...messageDetails
+    }
+}

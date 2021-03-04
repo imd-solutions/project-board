@@ -1,0 +1,37 @@
+.register {
+
+    .section {
+        padding: 0rem 1.5rem;
+    }
+
+    .has-text-centered {
+        margin-top: 10px;
+    }
+
+    .hero {
+        .is-fullheight {
+            min-height: 100vh !important;;
+        }
+
+        .icon {
+            margin-top: 1px;
+            margin-right: 1px;
+        }
+    }
+
+    .hero-body {
+        min-height: 20vh !important;
+        padding: 0rem 1.5rem;
+    }
+
+    .forgot-password {
+        padding-top: 20px !important;
+    }
+
+    .no-account-link, .has-text-centered {
+        a {
+            color: #A9ABAC;
+            font-weight: 500;
+        }
+    }
+}

@@ -1,0 +1,1092 @@
+/*! one-page-2.scss | Bulkit | CSS Ninja */
+
+/* ==========================================================================
+General Layout
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Hero
+1. Section
+2. Columns
+3. Titles
+4. Footer
+5. Media Queries
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Hero
+========================================================================== */
+
+body {
+    overflow-x: hidden;
+}
+
+.hero {
+    position: relative;
+
+    &.type-1 {
+        &.is-cover {
+            background-size: cover !important;
+        }
+
+        .hero-shape {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 100%;
+            z-index: 1 !important;
+        }
+
+        .is-hero-caption {
+            position: relative;
+            z-index: 2;
+
+            .field-wrap {
+                .field {
+                    margin-bottom: 4px;
+
+                    .control:first-child {
+                        flex-grow: 2;
+                    }
+                }
+
+                .form-text {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &.type-2 {
+        &.type-2-light {
+            background: lighten($primary, 29%);
+
+            .is-hero-caption {
+                .field-wrap {
+                    .form-text {
+                        color: $muted-grey;
+                    }
+                }
+            }
+        }
+
+        &.type-2-heavy {
+            background: $primary;
+
+            .is-hero-caption {
+                .field-wrap {
+                    .form-text {
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .hero-shape {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 100%;
+            z-index: 1 !important;
+        }
+
+        .is-hero-caption {
+            position: relative;
+            z-index: 2;
+
+            .field-wrap {
+                .field {
+                    margin-bottom: 4px;
+
+                    .control:first-child {
+                        flex-grow: 2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: #333;
+    opacity: 0.4;
+}
+
+/* ==========================================================================
+1. Client Logos
+========================================================================== */
+
+.ref-tabs {
+    ul, li a {
+        border-bottom: none !important;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        max-width: 110px;
+        max-height: 70px;
+    }
+}
+
+/* ==========================================================================
+2. Business Types
+========================================================================== */
+
+.business-types {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 0 20px 0;
+    max-width: 780px;
+    margin: 0 auto;
+
+    .business-type {
+        position: relative;
+        text-align: center;
+        width: calc(33.3% - 24px);
+        margin: 12px;
+        z-index: 1;
+
+        .inner {
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: $morph-shadow;
+            background: $white;
+
+            .inner-icon {
+                margin: 0 auto;
+
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    max-width: 100px;
+                }
+            }
+
+            .inner-text {
+                font-weight: 500;
+                font-size: 1.2rem;
+                color: $dark-text;
+            }
+        }
+    }
+}
+
+.extra-word {
+    display: flex;
+    max-width: 540px;
+    margin: 20px auto;
+
+    .avatar-wrap {
+        height: 100px;
+        width: 100px;
+        min-width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 2px solid $primary;
+        box-shadow: $morph-shadow;
+
+        img {
+            display: block;
+            height: 80px;
+            width: 80px;
+            min-width: 80px;
+            border-radius: 50%;
+        }
+    }
+
+    .text {
+        margin-left: 16px;
+
+        p {
+            color: $muted-grey;
+            margin-bottom: 6px;
+
+            .fa {
+                color: $primary;
+            }
+
+            .fa-quote-left {
+                padding-right: 5px;
+            }
+
+            .fa-quote-right {
+                padding-left: 5px;
+            }
+        }
+
+        span {
+            display: block;
+
+            &:nth-child(2) {
+                color: $dark-text;
+                font-weight: 500;
+            }
+
+            &:nth-child(3) {
+                font-size: .9rem;
+                color: $muted-grey;
+            }
+        }
+    }
+}
+
+.blob-1 {
+    position: absolute;
+    top: 10%;
+    right: -290px;
+    width: 280px;
+    z-index: 0;
+    opacity: .15;
+}
+
+.blob-2 {
+    position: absolute;
+    top: 10%;
+    left: -190px;
+    width: 380px;
+    z-index: 0;
+    opacity: .15;
+}
+
+.blob-3 {
+    position: absolute;
+    top: -80px;
+    left: -120px;
+    width: 90px;
+    z-index: 0;
+    opacity: .15;
+}
+
+.blob-4 {
+    position: absolute;
+    top: -82px;
+    left: 180px;
+    width: 130px;
+    z-index: 0;
+    opacity: .15;
+}
+
+.blob-5 {
+    position: absolute;
+    bottom: 50px;
+    right: -104px;
+    width: 130px;
+    z-index: 0;
+    opacity: .15;
+}
+
+/* ==========================================================================
+3. Themes
+========================================================================== */
+
+.theme-list {
+    padding: 30px 0;
+
+    a {
+        &:hover {
+            .theme-preview {
+                filter: grayscale(0);
+                opacity: 1;
+                transform: translateY(-5px);
+            }
+        }
+
+        .theme-preview {
+            display: block;
+            border-radius: 14px;
+            box-shadow: $morph-shadow;
+            filter: grayscale(1);
+            opacity: .6;
+            transition: all .3s;
+        }
+    }
+}
+
+.theme-feature {
+    .feature-icon {
+        i {
+            color: $primary;
+        }
+    }
+
+    h5 {
+        font-weight: 500;
+        color: $dark-text;
+    }
+
+    p {
+        color: $muted-grey;
+    }
+}
+
+/* ==========================================================================
+4. Side Features
+========================================================================== */
+
+.is-side-feature {
+    .text-column {
+        position: relative;
+
+        h3 {
+            margin-bottom: .75rem;
+        }
+
+        p {
+            color: $muted-grey;
+            font-size: 1.1rem;
+        }
+    }
+
+    .media-column {
+        position: relative;
+
+        .pattern {
+            position: absolute;
+            top: 20px;
+            display: block;
+            width: 130px;
+            opacity: .5;
+            z-index: 0;
+
+            &.is-left {
+                left: 111px;
+            }
+
+            &.is-right {
+                right: 110px;
+            }
+        }
+
+        .mockup {
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
+/* ==========================================================================
+5. Mockup Section
+========================================================================== */
+
+.mockup-wrap {
+    .image-wrap {
+        max-width: 840px;
+        margin: 0 auto;
+
+        img {
+            display: block;
+        }
+
+        .app-features {
+            max-width: 640px;
+            margin: 0 auto;
+
+            .content-flex {
+                h5 {
+                    margin-bottom: .35rem;
+                }
+
+                p {
+                    color: $muted-grey;
+                }
+
+                i {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+6. Testimonials
+========================================================================== */
+
+.customer-testimonials-wrapper {
+    position: relative;
+
+    .customer-testimonials {
+        max-width: 840px;
+        margin: 0 auto;
+        padding: 40px 0;
+
+        .testimonial-item {
+            outline: none;
+
+            .item-inner {
+                display: flex;
+                align-items: center;
+
+                .left {
+                    width: calc(50% - 120px);
+                    margin-left: 120px;
+
+                    .rating {
+                        margin-bottom: 8px;
+
+                        i {
+                            font-size: 1.3rem;
+                            color: #ffc02e;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 12px;
+
+                        i {
+                            color: $primary;
+                        }
+
+                        .fa-quote-left {
+                            margin-right: 5px;
+                        }
+
+                        .fa-quote-right {
+                            margin-left: 5px;
+                        }
+                    }
+
+                    .meta {
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            display: block;
+                            height: 48px;
+                            width: 48px;
+                            min-width: 48px;
+                            border-radius: 50%;
+                        }
+
+                        .inner-meta {
+                            margin-left: 12px;
+                            line-height: 1.2;
+
+                            span {
+                                display: block;
+
+                                &:first-child {
+                                    color: $dark-text;
+                                    font-size: 1.1rem;
+                                    font-weight: 500;
+                                }
+
+                                &:nth-child(2) {
+                                    color: $muted-grey;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .right {
+                    width: 50%;
+
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                        width: auto;
+
+                        //max-width: 180px;
+                        max-height: 478px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+7. Image Section
+========================================================================== */
+
+.section-wrap {
+    display: flex;
+    align-items: stretch;
+    min-height: 650px;
+
+    .section {
+        &.image-section {
+            width: 100%;
+            padding-left: 10%;
+            padding-right: 5%;
+            background: darken($sidebar, 8%);
+
+            .title, .subtitle, p {
+                color: $white;
+            }
+
+            .support-features {
+                padding: 16px 0;
+
+                > p {
+                    margin-bottom: 16px;
+                }
+
+                .support-card {
+                    display: inline-block;
+                    padding: 20px;
+                    width: 100%;
+                    border-radius: 10px;
+                    background: darken($sidebar, 14%);
+                    border: 1px solid darken($sidebar, 10%);
+                    text-align: center;
+                    transition: all .3s;
+
+                    &:hover {
+                        border-color: $primary !important;
+                        box-shadow: $light-box-shadow;
+
+                        h3, i {
+                            color: $primary;
+                        }
+                    }
+
+                    i {
+                        font-size: 2.8rem;
+                        color: $muted-grey;
+                        transition: color .3s;
+                    }
+
+                    h3 {
+                        font-weight: 500;
+                        color: $white;
+                        transition: color .3s;
+                    }
+
+                    p {
+                        font-size: .95rem;
+                        color: $muted-grey;
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 2;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+/* ==========================================================================
+8. Pricing
+========================================================================== */
+
+.pricing-wrapper {
+    padding: 30px 0;
+    max-width: 900px;
+    margin: 0 auto;
+
+    .pricing-box {
+        padding: 20px;
+        box-shadow: $morph-shadow;
+        border-radius: 10px;
+        background: $white;
+        text-align: center;
+
+        > img {
+            display: block;
+            max-width: 160px;
+            margin: 0 auto;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: $primary;
+        }
+
+        > p {
+            margin-bottom: 16px;
+            color: $muted-grey;
+        }
+
+        .price {
+            position: relative;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid darken($fade-grey, 4%);
+            border-top: 1px solid darken($fade-grey, 4%);
+            margin-bottom: 16px;
+
+            .price-number {
+                position: relative;
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: $dark-text;
+
+                &:after {
+                    content: 'PER MONTH';
+                    position: absolute;
+                    top: 6px;
+                    right: 40px;
+                    font-size: .8rem;
+                    font-weight: 400;
+                    color: $muted-grey;
+                    text-align: left;
+                    text-transform: uppercase;
+                    max-width: 50px;
+                    line-height: 1.2;
+                }
+            }
+        }
+
+        .button {
+            min-height: 40px;
+            font-weight: 500;
+        }
+    }
+}
+
+/* ==========================================================================
+9. Section
+========================================================================== */
+
+.section {
+    &.is-grey {
+        background: $section-grey;
+    }
+
+    &.is-dark {
+        background: $sidebar;
+    }
+}
+
+.section-title {
+    &.is-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .title-wrap {
+        }
+
+        .actions {
+            .link-wrap {
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: -6px;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    border-bottom: 1.6px dashed $primary;
+                }
+
+                a {
+                    display: inline-block;
+                    color: $primary;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .subtitle {
+        color: $muted-grey;
+    }
+}
+
+.section-cta {
+    padding: 40px 0 0 0;
+
+    .button {
+        min-width: 220px;
+    }
+
+    p {
+        margin-top: 12px;
+        color: $muted-grey;
+    }
+}
+
+/* ==========================================================================
+10. Columns
+========================================================================== */
+
+.columns {
+    .column {
+        &.is-relative {
+            position: relative;
+        }
+    }
+}
+
+/* ==========================================================================
+11. Titles
+========================================================================== */
+
+.title {
+    font-family: 'Nexa Bold', sans-serif;
+    color: $dark-text;
+
+    &.is-light {
+        color: $smoke-white;
+    }
+
+    &.primary-title {
+        color: $primary;
+    }
+
+    &.grey-title {
+        color: $med-grey;
+    }
+}
+
+.subtitle {
+    font-family: 'Open Sans', sans-serif;
+
+    &.is-light {
+        color: $smoke-white;
+    }
+}
+
+/* ==========================================================================
+12. Footer
+========================================================================== */
+
+.footer-light-medium {
+    padding-bottom: 0 !important;
+    padding-top: 4rem !important;
+    background: lighten($fade-grey, 5%);
+
+    .footer-head {
+        padding-bottom: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid darken($fade-grey, 4%);
+
+        .head-text {
+            h3 {
+                font-family: 'Nexa Bold', sans-serif;
+                font-size: 1.8rem;
+                color: $dark-text;
+            }
+
+            p {
+                font-size: 1.1rem;
+                color: $muted-grey;
+            }
+        }
+
+        .head-action {
+            .buttons {
+                .button {
+                    &.action-button {
+                        height: 36px;
+                        min-width: 140px;
+                    }
+
+                    &.chat-button {
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                        box-shadow: none;
+                        color: $primary;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-body {
+        padding-top: 3rem;
+
+        .footer-column {
+            padding-top: 20px;
+
+            .column-header {
+                font-family: 'Nexa Light', sans-serif;
+                text-transform: uppercase;
+                color: $dark-text;
+                font-size: 1rem;
+                font-weight: 700;
+                margin: 10px 0;
+            }
+
+            .column-item {
+                padding-bottom: 10px;
+
+                a {
+                    color: $muted-grey;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 0;
+
+            a {
+                color: $muted-grey;
+                margin: 0 5px;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+
+        .footer-description {
+            color: $muted-grey;
+            padding: 10px 0;
+        }
+
+        .moto {
+            color: $muted-grey;
+        }
+
+        .small-footer-logo {
+            height: 24px;
+        }
+    }
+
+    .footer-copyright {
+        color: $muted-grey;
+        padding: 4rem 0 2rem 0;
+
+        a {
+            color: $muted-grey;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+13. Media Queries
+========================================================================== */
+
+@media (max-width: 767px) {
+    .hero {
+        &.type-1 {
+            .is-hero-caption {
+                text-align: center;
+
+                .field-wrap {
+                    .field {
+                        flex-direction: column;
+
+                        .control {
+                            &:first-child {
+                                margin-bottom: 8px;
+                                margin-right: 0;
+                            }
+
+                            .button {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .business-types {
+        .business-type {
+            width: calc(100% - 24px);
+        }
+    }
+
+    .extra-word {
+        flex-direction: column;
+        text-align: center;
+
+        .avatar-wrap {
+            margin: 0 auto 12px auto;
+        }
+
+        .text {
+            margin-left: 0;
+        }
+    }
+
+    .section-title {
+        &.is-flex {
+            flex-direction: column;
+            text-align: center;
+
+            .actions {
+                margin: 10px auto;
+            }
+        }
+    }
+
+    .customer-testimonials-wrapper {
+        .customer-testimonials {
+            .testimonial-item {
+                .item-inner {
+                    flex-direction: column;
+
+                    .left {
+                        width: 100%;
+                        margin-left: 0;
+                        margin-bottom: 30px;
+                        text-align: center;
+
+                        .meta {
+                            text-align: left;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section-wrap {
+        flex-direction: column;
+
+        .section {
+            &.image-section {
+                width: 100%;
+                padding-left: 10%;
+                padding-right: 10%;
+                text-align: center;
+            }
+        }
+    }
+
+    .partner-logos {
+        img {
+            height: 54px !important;
+            margin: 0 12px !important;
+        }
+    }
+
+    .footer-light-medium {
+        .footer-head {
+            flex-direction: column;
+            text-align: center;
+
+            .head-text {
+                padding-bottom: 20px;
+            }
+        }
+
+        .footer-body {
+            padding: 1rem !important;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .theme-list {
+        display: flex;
+
+        .column {
+            width: 50%;
+            min-width: 50%;
+            flex-grow: 2;
+        }
+    }
+
+    .theme-features {
+        display: flex;
+
+        .theme-feature {
+            p {
+                font-size: .9rem;
+            }
+        }
+    }
+
+    .is-side-feature {
+        text-align: center;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .app-features {
+        display: flex;
+        flex-wrap: wrap;
+
+        .column {
+            width: 50%;
+            min-width: 50%;
+            flex-grow: 2;
+        }
+    }
+
+    .section-wrap {
+        .section {
+            &.image-section {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+        }
+    }
+
+    .pricing-wrapper {
+        .columns {
+            display: flex;
+        }
+    }
+
+    .footer-light-medium {
+        .footer-head {
+            padding: 1rem !important;
+        }
+
+        .footer-body {
+            display: flex;
+            padding: 2rem 1rem !important;
+
+            .column.is-4 {
+                width: 42%;
+                max-width: 42%;
+                flex-shrink: 1;
+            }
+
+            .is-offset-2 .columns {
+                display: flex !important;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .section-wrap {
+        .section {
+            &.image-section {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+        }
+    }
+}

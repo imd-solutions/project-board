@@ -1,0 +1,25 @@
+/*! core.scss | Bulkit | CSS Ninja */
+
+/* ==========================================================================
+CSS Core
+========================================================================== */
+
+@import "abstracts/theme";
+@import "abstracts/fonts";
+@import "abstracts/animations";
+@import "layout/pageloader";
+@import "layout/navbar";
+@import "layout/sections";
+@import "layout/navigation";
+@import "components/pricing";
+@import "components/buttons";
+@import "components/forms";
+@import "pages/one-page-3";
+@import "utilities/utilities";
+@import "layout/responsive";
+
+$slick-font-path: "/assets/fonts/";
+$slick-loader-path: "/assets/fonts/";
+
+@import "../../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../../node_modules/slick-carousel/slick/slick-theme.scss";
